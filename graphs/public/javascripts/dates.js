@@ -1,10 +1,12 @@
-document.write(Date());
-
 window.onload = function () {
-  var select = document.getElementById("year");
-  for(var i = 2014; i >= 1950; i--){
+  var today = Date();
+  document.getElementById('today').innerHTML = today;
+
+  var select = document.getElementById("projects");
+  for(var i = 10; i >= 1; i--){
     var option = document.createElement("option");
     option.text = option.value = i;
     select.add(option, 0);
   }
 };
+

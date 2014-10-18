@@ -6,14 +6,42 @@ html(lang="en")
   head
     title= Dates
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/zabuto_calender.min.css')    
 
     script(src="/javascripts/jquery-2.1.1.js")
+    script(src="/javascripts/zabuto_calendar.min.js")
+    script(src="/javascripts/bootstrap.min.js")
     script(src="/javascripts/dates.js")
+    script(src="/javascipts/d3.min.js")
+    
+    script(type="text/javascript").
+      $(document).ready(function (){
+        $("#my-calendar").zabuto_calendar({ 
+          language: 'en',
+          action: function(){
+            return setDeadline(this.id);
+          }
+        });
+      });
+      var setDeadline = function(id){
+        var date = $("#" + id).data("date");
+        document.getElementById('date').innerHTML = "End date is: " + date;
+      }
 
+    script(type="text/javascript").
+      
   body
-    h1 Select a date
-      h3. 
-        Date Selection
-      select#year  
-      button(class = "btn", data-action="bea").
-        Choose Date
+    p.
+      Today's date is:
+    #today
+    h3 Select a project
+      p
+      p
+        select#projects
+      button(onclick = "addDate", id = "addDate", class = "btn btn-primary").
+        Add a deadline
+      p
+      #date
+      #my-calendar
+      #bar-graph
+     
