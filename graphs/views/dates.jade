@@ -6,13 +6,13 @@ html(lang="en")
   head
     title= Dates
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/zabuto_calender.min.css')    
+    link(rel='stylesheet', href='/stylesheets/zabuto_calendar.min.css')    
 
     script(src="/javascripts/jquery-2.1.1.js")
     script(src="/javascripts/zabuto_calendar.min.js")
     script(src="/javascripts/bootstrap.min.js")
     script(src="/javascripts/dates.js")
-    script(src="/javascipts/d3.min.js")
+    script(src="/javascripts/d3.min.js")
     
     script(type="text/javascript").
       $(document).ready(function (){
@@ -27,21 +27,40 @@ html(lang="en")
         var date = $("#" + id).data("date");
         document.getElementById('date').innerHTML = "End date is: " + date;
       }
-
     script(type="text/javascript").
-      
+      $(document).ready(function (){
+        var data = [4, 8, 15, 16, 23, 42];
+        //document.getElementById('barGraph').innerHTML = "Progress";
+        
+        var x = d3.scale.linear()
+            .domain([0, d3.max(data)])
+            .range([0, 420]);
+
+        d3.select(".chart")
+          .selectAll("div")
+            .data(data)
+          .enter().append("div")
+            .style("width", function(d) {return x(d) + "px";})
+            .text(function(d) {return d; });
+      });  
+
   body
     p.
       Today's date is:
     #today
     h3 Select a project
-      p
-      p
-        select#projects
+      br
+      br
+      select#projects
+      br
+      br
       button(onclick = "addDate", id = "addDate", class = "btn btn-primary").
         Add a deadline
-      p
+      br
+      br
       #date
+      br
       #my-calendar
-      #bar-graph
+      br
+      .chart
      
