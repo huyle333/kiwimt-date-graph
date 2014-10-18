@@ -1,9 +1,6 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
 
-a {
-  color: #00B7FF;
-}
+@import "bootstrap-sass-3.2.0/assets/stylesheets/bootstrap.scss";
+@import "_layout.scss";
+@import "_global.scss";
+@import "_dates.scss";
 
