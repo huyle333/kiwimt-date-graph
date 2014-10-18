@@ -26,6 +26,9 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+<<<<<<< HEAD
 
 #ignore data files
 graphs/data/
+=======
+>>>>>>> 80e584d1aa671a6c8761c71e4e6fba8135e30265
