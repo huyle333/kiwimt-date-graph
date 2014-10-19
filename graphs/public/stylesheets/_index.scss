@@ -1,5 +1,5 @@
 #headerImage{
-	background: url("../img/boston.png") center center fixed;
+	background: url("/images/boston.png") center center fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 800px;
@@ -45,13 +45,13 @@
 		transition: 0.6s opacity;
 	}
 	#sf{
-		background: url("../img/sf.png") center center;
+		background: url("/images/sf.png") center center;
 	}
 	#battlehack{
-		background: url("../img/battlehack.png") center center;
+		background: url("/images/battlehack.png") center center;
 	}
 	#ggb{
-		background: url("../img/ggb.png") center center;
+		background: url("/images/ggb.png") center center;
 	}
 }
 #founders{
