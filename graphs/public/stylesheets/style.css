@@ -5295,6 +5295,7 @@ body {
 a {
   color: #00B7FF; }
 
+@imoprt "_index.scss";
 .chart div {
   font: 10px sans-serif;
   background-color: steelblue;

@@ -1,5 +1,124 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang="en")
+	head
+		title= Yarn
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.container-fluid#headerImage
+			.row
+				.col-sm-6
+					.hero-unit
+						h1.
+							Yarn
+						p.
+							Time is limited
+					.btns
+						.btn.btn-large.btn-primary
+							a(href="#") Register
+						.btn.btn-default
+							a(href="#") Log In
+		.jumbotron
+			.container
+				div#middleDesc.row
+					h2.
+						Yarn and You
+				div#threeFields.row
+					.col-md-4
+						.threeIcons
+							img(src="images/clock.png")
+							h3. 
+								Save Time
+							p.
+								Time matters, so we help you spend it wisely.
+					.col-md-4
+						.threeIcons
+							img(src="images/check.png")
+							h3.
+								Easy Management
+							p.
+								Keep track of your progress easily.
+					.col-md-4
+						.threeIcons
+							img(src="images/rocket.png")
+							h3.
+								Fast and Efficient
+							p.
+								Work at the speed of light.
+		.threeDividers
+			div#sf.container
+				h1.
+					Beauty and Elegance
+			div#battlehack.container
+				h1.
+					Built by Winners
+			div#ggb.container
+				h1.
+					Made in San Francisco
+		div#founders.jumbotron
+			.container
+				div#foundersTitle.row
+					h2.
+						The founders
+				div#threeFounder.row
+					.col-md-4
+						.threeHeroes
+							img(src="images/owen.png")
+							h3.
+								Owen Zhang
+							p.
+								Front-End Ninja.
+					.col-md-4
+						.threeHeroes
+							img(src="images/winston.png")
+							h3.
+								Winston Chen
+							p.
+								Computer Engineer.
+					.col-md-4
+						.threeHeroes
+							img(src="images/owen.png")
+							h3.
+								Huy Le
+							p.
+								Student Developer
+		div#footer.container
+			.col-md-6
+				h3.
+					Over a million registered users
+				h4. 
+					Why haven't you joined us?
+			.col-md-6
+				.col-md-4
+					ul
+						h4.
+							Categories
+					ul
+						a(href="#") About Us
+					ul
+						a(href="#") Blog
+					ul
+						a(href="#") Team
+					ul
+						a(href="#") Career
+					ul
+						a(href="#") Contact
+				.col-md-4
+					ul
+						h4.
+							Follow Us
+					ul
+						a(href="#") Facebook
+					ul
+						a(href="#") Twitter
+					ul
+						a(href="#") LinkedIn
+					ul
+						a(href="#") Myspace
+					ul
+						a(href="#") Google Plus
+				.col-md-4
+					.btns
+						ul
+							.btn.btn-large.btn-primary(href = "#") Register
+						ul
+							.btn.btn-default(href = "#") Log In
