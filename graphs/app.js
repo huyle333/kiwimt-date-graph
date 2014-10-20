@@ -10,6 +10,9 @@ var mongo = require('mongodb');
 var monk = require('monk');
 var db = monk('localhost:27017/graphs');
 
+//var passport = require('passport');
+//var User = require('./app/models/User');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 

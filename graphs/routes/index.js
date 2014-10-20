@@ -16,6 +16,11 @@ router.get('/dates', function(req,res) {
   res.render('dates', {title: 'dates'})
 });
 
+/* GET logins */
+router.get('/login', function(req,res){
+  res.render('login', {title: 'login'})
+});
+
 /* GET Userlist page. */
 router.get('/userlist', function(req, res){
   var db = req.db;
